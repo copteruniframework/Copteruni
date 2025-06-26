@@ -4,6 +4,78 @@
     align-items: flex-start;
 }
 
+.u-hflex-left-center {
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+
+.u-hflex-left-bottom {
+    justify-content: flex-start;
+    align-items: flex-end;
+    display: flex;
+}
+
+@media screen and (max-width: 991px) {
+    .ul-hflex-left-top {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .ul-hflex-left-center {
+        justify-content: flex-start;
+        align-items: center;
+        display: flex;
+    }
+
+    .ul-hflex-left-bottom {
+        justify-content: flex-start;
+        align-items: flex-end;
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .um-hflex-left-top {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .um-hflex-left-center {
+        justify-content: flex-start;
+        align-items: center;
+        display: flex;
+    }
+
+    .um-hflex-left-bottom {
+        justify-content: flex-start;
+        align-items: flex-end;
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .us-hflex-left-top {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .us-hflex-left-center {
+        justify-content: flex-start;
+        align-items: center;
+        display: flex;
+    }
+
+    .us-hflex-left-bottom {
+        justify-content: flex-start;
+        align-items: flex-end;
+        display: flex;
+    }
+}
+
 /* align-self */
 .u-align-self-auto {
     align-self: auto;
@@ -113,12 +185,6 @@
 
 /* large */
 @media screen and (max-width: 991px) {
-    .ul-hflex-left-top {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-
     .ul-align-self-auto {
         align-self: auto;
     }
@@ -186,12 +252,6 @@
 
 /* medium */
 @media screen and (max-width: 767px) {
-    .um-hflex-left-top {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-
     .um-flex-col-1 {
         flex-basis: 8.3333333333%;
         max-width: 8.3333333333%
@@ -260,16 +320,11 @@
 
 /* small */
 @media screen and (max-width: 479px) {
-    .us-hflex-left-top {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-
-    .us-flex-col-1 {
+     .us-flex-col-1 {
         flex-basis: 8.3333333333%;
         max-width: 8.3333333333%
     }
+
     .us-flex-col-1 {
         flex-basis: 8.3333333333%;
         max-width: 8.3333333333%
