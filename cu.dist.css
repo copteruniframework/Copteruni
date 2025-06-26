@@ -1,0 +1,159 @@
+.u-hflex-left-top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* align-self */
+.u-align-self-auto {
+    align-self: auto;
+}
+
+.u-align-self-start {
+  align-self: flex-start;
+}
+
+.u-align-self-center {
+  align-self: center;
+}
+
+.u-align-self-end {
+  align-self: flex-end;
+}
+
+.u-align-self-stretch {
+  align-self: stretch;
+}
+
+/* justify-content */
+.u-justify-content-start {
+  justify-content: start;
+}
+
+.u-justify-content-center {
+  justify-content: center;
+}
+
+.u-justify-content-end {
+  justify-content: end;
+}
+
+.u-justify-content-spacebetween {
+  justify-content: space-between;
+}
+
+.u-justify-content-spacearound {
+  justify-content: space-around;
+}
+
+.u-justify-content-spaceevenly {
+    justify-content: space-evenly
+}
+
+/* Flex Columns */
+.u-flex-col-1 {
+    flex-basis: 8.3333333333%;
+    max-width: 8.3333333333%
+}
+
+.u-flex-col-2 {
+    flex-basis: 16.6666666667%;
+    max-width: 16.6666666667%
+}
+
+.u-flex-col-3 {
+    flex-basis: 25%;
+    max-width: 25%
+}
+
+.u-flex-col-4 {
+    flex-basis: 33.3333333333%;
+    max-width: 33.3333333333%
+}
+
+.u-flex-col-5 {
+    flex-basis: 41.6666666667%;
+    max-width: 41.6666666667%
+}
+
+.u-flex-col-6 {
+    flex-basis: 50%;
+    max-width: 50%
+}
+
+.u-flex-col-7 {
+    flex-basis: 58.3333333333%;
+    max-width: 58.3333333333%
+}
+
+.u-flex-col-8 {
+    flex-basis: 66.6666666667%;
+    max-width: 66.6666666667%
+}
+
+.u-flex-col-9 {
+    flex-basis: 75%;
+    max-width: 75%
+}
+
+.u-flex-col-10 {
+    flex-basis: 83.3333333333%;
+    max-width: 83.3333333333%
+}
+
+.u-flex-col-11 {
+    flex-basis: 91.6666666667%;
+    max-width: 91.6666666667%
+}
+
+.u-flex-col-12 {
+    flex-basis: 100%;
+    max-width: 100%
+}
+
+/* large */
+@media screen and (max-width: 991px) {
+    .ul-hflex-left-top {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .ul-align-self-auto {
+        align-self: auto;
+    }
+
+    .ul-flex-col-1 {
+        flex-basis: 8.3333333333%;
+        max-width: 8.3333333333%
+    }
+}
+
+/* medium */
+@media screen and (max-width: 767px) {
+    .um-hflex-left-top {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .um-flex-col-1 {
+        flex-basis: 8.3333333333%;
+        max-width: 8.3333333333%
+    }
+}
+
+/* small */
+@media screen and (max-width: 479px) {
+    .us-hflex-left-top {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .us-flex-col-1 {
+        flex-basis: 8.3333333333%;
+        max-width: 8.3333333333%
+    }
+
+}
