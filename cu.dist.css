@@ -1,3 +1,56 @@
+/* Breakpoints
+@media screen and (max-width: 991px) {
+
+}
+
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (max-width: 479px) {
+
+}
+*/
+
+.u-flex-flow-row {
+    flex-flow: row;
+}
+
+.u-flex-flow-column {
+    flex-flow: column;
+}
+
+@media screen and (max-width: 991px) {
+    .ul-flex-flow-row {
+        flex-flow: row;
+    }
+
+    .ul-flex-flow-column {
+        flex-flow: column;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .um-flex-flow-row {
+        flex-flow: row;
+    }
+
+    .um-flex-flow-column {
+        flex-flow: column;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .us-flex-flow-row {
+        flex-flow: row;
+    }
+
+    .us-flex-flow-column {
+        flex-flow: column;
+    }
+}
+
+
 .u-hflex-left-top {
     display: flex;
     justify-content: flex-start;
@@ -5,15 +58,15 @@
 }
 
 .u-hflex-left-center {
+    display: flex;
     justify-content: flex-start;
     align-items: center;
-    display: flex;
 }
 
 .u-hflex-left-bottom {
+    display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    display: flex;
 }
 
 @media screen and (max-width: 991px) {
@@ -24,15 +77,15 @@
     }
 
     .ul-hflex-left-center {
+        display: flex;
         justify-content: flex-start;
         align-items: center;
-        display: flex;
     }
 
     .ul-hflex-left-bottom {
+        display: flex;
         justify-content: flex-start;
         align-items: flex-end;
-        display: flex;
     }
 }
 
@@ -44,15 +97,15 @@
     }
 
     .um-hflex-left-center {
+        display: flex;
         justify-content: flex-start;
         align-items: center;
-        display: flex;
     }
 
     .um-hflex-left-bottom {
+        display: flex;
         justify-content: flex-start;
         align-items: flex-end;
-        display: flex;
     }
 }
 
@@ -64,15 +117,15 @@
     }
 
     .us-hflex-left-center {
+        display: flex;
         justify-content: flex-start;
         align-items: center;
-        display: flex;
     }
 
     .us-hflex-left-bottom {
+        display: flex;
         justify-content: flex-start;
         align-items: flex-end;
-        display: flex;
     }
 }
 
