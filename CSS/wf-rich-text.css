@@ -1,0 +1,54 @@
+.u-rich-text-blog h1::after,
+.u-rich-text-blog h2::after,
+.u-rich-text-blog h3::after {
+    content: "";
+    display: block;
+    height: 0.1875rem;
+    margin: auto;
+    border-radius: 100%;
+    background-image: linear-gradient(90deg, hsla(0, 0.00%, 0.00%, 0.00) 5%, var(--_brand---tintsshades--brand-500) 54%, hsla(0, 0.00%, 0.00%, 0.00) 95%);
+}
+
+.u-rich-text-blog h1::after,
+.u-rich-text-blog h2::after {
+    margin-bottom: 1.25rem;
+}
+
+.u-rich-text-blog p+h2 {
+    margin-top: var(--_fluid-responsive---paddings--padding-medium);
+}
+
+.u-rich-text-blog p+p,
+.u-view-only-p h2+p,
+.u-view-only-p h1+p {
+    margin-top: 1.1rem;
+}
+
+.u-view-only-p>p:first-of-type {
+    margin-top: 0;
+}
+
+.u-view-only-p>* {
+    display: none;
+}
+
+.u-view-only-p p {
+    display: block;
+}
+
+p+ :is(ul, ol) {
+    margin-top: var(--_fluid-responsive---paddings--padding-small);
+}
+
+p> :is(ul, ol),
+:is(ul, ol)>p {
+    margin-top: var(--_fluid-responsive---paddings--padding-small);
+}
+
+li> :is(ul, ol) {
+    margin-top: var(--_fluid-responsive---paddings--padding-xsmall);
+}
+
+li+li {
+    margin-top: var(--_spacing---2);
+}
