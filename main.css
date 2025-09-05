@@ -92,42 +92,6 @@
       -webkit-line-clamp: 10;
   }
 
-  /* These classes are never overwritten */
-  .hide {
-      display: none !important;
-  }
-
-  @media screen and (max-width: 991px),
-  @media screen and (max-width: 767px),
-  @media screen and (max-width: 479px) {
-      .hide,
-      .hide-tablet {
-          display: none !important;
-      }
-  }
-
-  @media screen and (max-width: 767px) .hide-mobile-landscape {
-      display: none !important;
-  }
-  }
-
-  @media screen and (max-width: 479px) .hide-mobile {
-      display: none !important;
-  }
-  }
-
-  @media screen and (min-width: 992px) {
-      .hide-desktop {
-          display: none !important;
-      }
-  }
-
-  @media screen and (max-width: 991px) {
-      .hide-desktop {
-          display: initial !important;
-      }
-  }
-
   .u-margin-trim> :first-child,
   .u-margin-trim> :not(:not(.w-condition-invisible) ~ :not(.w-condition-invisible)) {
       margin-top: 0;
