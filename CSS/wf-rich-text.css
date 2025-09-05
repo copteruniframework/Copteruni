@@ -36,7 +36,8 @@
     display: block;
 }
 
-p+ :is(ul, ol) {
+p+ :is(ul, ol),
+:is(ul, ol) +p {
     margin-top: var(--_fluid-responsive---paddings--padding-small);
 }
 
