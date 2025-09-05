@@ -82,7 +82,65 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Details - Dropdown
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('details').forEach(detail => {
+      const summary = detail.querySelector('summary');
+      const content = summary.nextElementSibling;
+
+      const closeDetails = () => {
+        if (!detail.open || gsap.isTweening(content)) return;
+
+        gsap.to(content, {
+          height: 0,
+          opacity: 0,
+          duration: 0.3,
+          ease: 'power2.in',
+          onComplete: () => {
+            detail.open = false;
+            gsap.set(content, { clearProps: "all" });
+          }
+        });
+      };
+
+      summary.addEventListener('click', e => {
+        e.preventDefault();
+        if (gsap.isTweening(content)) return;
+
+        if (!detail.open) {
+          detail.open = true;
+          gsap.fromTo(content, {
+            height: 0,
+            opacity: 0
+          }, {
+            height: content.scrollHeight,
+            opacity: 1,
+            duration: 0.4,
+            ease: 'power2.out',
+            onComplete: () => {
+              gsap.set(content, { clearProps: "all" });
+            }
+          });
+        } else {
+          closeDetails();
+        }
+      });
+
+      // AUTOCLOSE HANDLING
+      if (detail.dataset.autoclose === "true") {
+        document.addEventListener('click', (e) => {
+          // Wenn Klick außerhalb des <details>
+          if (!detail.contains(e.target)) {
+            closeDetails();
+          }
+        });
+      }
+    });
+  });
+
 // GSAP
+
+// hide-show-fab
 document.addEventListener('DOMContentLoaded', () => {
   gsap.registerPlugin(ScrollTrigger);
 
