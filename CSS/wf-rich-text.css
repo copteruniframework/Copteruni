@@ -40,11 +40,6 @@ p+ :is(ul, ol) {
     margin-top: var(--_fluid-responsive---paddings--padding-small);
 }
 
-p> :is(ul, ol),
-:is(ul, ol)>p {
-    margin-top: var(--_fluid-responsive---paddings--padding-small);
-}
-
 li> :is(ul, ol) {
     margin-top: var(--_fluid-responsive---paddings--padding-xsmall);
 }
