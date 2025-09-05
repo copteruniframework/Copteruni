@@ -82,14 +82,17 @@
 
   .u-text-style-2lines {
       -webkit-line-clamp: 2;
+      line-clamp: 2;
   }
 
   .u-text-style-3lines {
       -webkit-line-clamp: 3;
+      line-clamp: 3;
   }
 
   .u-text-style-10lines {
       -webkit-line-clamp: 10;
+      line-clamp: 10;
   }
 
   .u-margin-trim> :first-child,
