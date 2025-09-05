@@ -127,15 +127,6 @@
       padding: 0;
   }
 
-  /* Global / Clickable Component */
-  .g_clickable_wrap a[href="#"] {
-      display: none;
-  }
-
-  .g_clickable_wrap a[href="#"]~button {
-      display: block;
-  }
-
   .u-hflex-left-stretch>*:first-child .u-icon-1x1-small,
   .u-hflex-left-stretch>.u-icon-1x1-small:first-child {
       flex: none;
