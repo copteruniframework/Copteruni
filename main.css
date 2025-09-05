@@ -136,29 +136,6 @@
       display: block;
   }
 
-  .dev_dd[dev_hover="true"]:hover .dev_dd_wrapper,
-  .dev_dd[dev_hover="false"]:has(.cb-touch:checked) .dev_dd_wrapper {
-      grid-template-rows: 1fr;
-      opacity: 100%;
-  }
-
-  .dev_dd[dev_hover="false"]:has(.g_clickable_checkbox:checked) .dev_dd_wrapper {
-      grid-template-rows: 1fr;
-      opacity: 100%;
-  }
-
-  /* Haupt-Dropdown darf per Hover oder Focus öffnen */
-  .u-dropdown:hover>.u-dropdow-wrapper,
-  .u-dropdown:focus-within>.u-dropdow-wrapper {
-      display: block;
-  }
-
-  .g_dropdown[dropdown-onHover="true"]:hover:has(.g_dropdown_checkbox:not(:checked)) .g_dropdown_menu,
-  .g_dropdown[dropdown-autoClose="true"]:focus-within .g_dropdown_menu,
-  .g_dropdown[dropdown-stayOpen="true"]:has(.g_dropdown_checkbox:checked) .g_dropdown_menu {
-      grid-template-rows: 1fr;
-  }
-
   .u-hflex-left-stretch>*:first-child .u-icon-1x1-small,
   .u-hflex-left-stretch>.u-icon-1x1-small:first-child {
       flex: none;
