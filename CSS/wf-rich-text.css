@@ -37,7 +37,7 @@
 }
 
 .u-rich-text-blog p+ :is(ul, ol),
-.u-rich-text-blog :is(ul, ol) +p {
+.u-rich-text-blog :is(ul, ol)+p {
     margin-top: var(--_fluid-responsive---paddings--padding-small);
 }
 
@@ -55,6 +55,13 @@
 
 .u-rich-text-doc p+p {
     margin-top: var(--_fluid-responsive---paddings--padding-small);
+}
+
+.u-rich-text-doc .w-code-block {
+    /* scrollbar-width: none; */
+    margin: var(--_fluid-responsive---paddings--padding-small) 0;
+    font-size: var(--_fluid-responsive---text--text-size-small);
+    border-radius: var(--radius--main);
 }
 
 /* li+li {
