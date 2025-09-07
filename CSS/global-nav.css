@@ -59,45 +59,68 @@
 
 
 .dev_nav_menu_list {
-  display: contents;
+    display: contents;
 }
 
 .dev_nav_menu_list:where(.w-variant-ca3f659e-dd85-61db-41f9-526769ceb0c8) {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  gap: 1rem;
-  height: calc(100dvh - var(--global-nav--height));
-  overflow-y: auto;
-}
-
-.dev_nav_menu_list.is-close {}
-
-@media screen and (max-width: 991px) {
-  .dev_nav_menu_list:where(.w-variant-ab9b464f-3359-90da-4246-c1fa95a1ae07) {
     display: flex;
     flex-flow: column;
     justify-content: center;
     gap: 1rem;
     height: calc(100dvh - var(--global-nav--height));
-  }
+    overflow-y: auto;
+}
+
+.dev_nav_menu_list.is-close {}
+
+@media screen and (max-width: 991px) {
+    .dev_nav_menu_list:where(.w-variant-ab9b464f-3359-90da-4246-c1fa95a1ae07) {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        gap: 1rem;
+        height: calc(100dvh - var(--global-nav--height));
+    }
 }
 
 @media screen and (max-width: 991px) {
-  .dev_nav_menu_list:where(.w-variant-ca3f659e-dd85-61db-41f9-526769ceb0c8) {}
+    .dev_nav_menu_list:where(.w-variant-ca3f659e-dd85-61db-41f9-526769ceb0c8) {}
 }
 
 @media screen and (max-width: 991px) {
-  .dev_nav_menu_list.is-close:where(.w-variant-ab9b464f-3359-90da-4246-c1fa95a1ae07) {
-    transform: translate(-100%, 0px);
-  }
+    .dev_nav_menu_list.is-close:where(.w-variant-ab9b464f-3359-90da-4246-c1fa95a1ae07) {
+        transform: translate(-100%, 0px);
+    }
 }
 
-  @media screen and (max-width: 350px) {
+#navLogoBig {
+    display: block;
+}
+
+#navLogoSmall {
+    display: none;
+}
+
+@media screen and (max-width: 350px) {
     #navLogoBig {
-      display: none;
+        display: none;
     }
+
     #navLogoSmall {
-      display: block;
+        display: block;
     }
-  }
+}
+
+.dev_nav_menu_list_item.faq {
+    display: none;
+}
+
+@media screen and (max-width: 300px) {
+    .dev_nav_btn.faq {
+        display: none;
+    }
+
+    .dev_nav_menu_list_item.faq {
+        display: list-item;
+    }
+}

@@ -21,6 +21,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Mobile menu open
+document.addEventListener('DOMContentLoaded', () => {
+    const navBtn = document.querySelector('[data-nav-btn="menu"]');
+    const navMenu = document.querySelector('[data-nav-item="menu"]');
+
+    if (!navBtn || !navMenu) return;
+
+    navBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('is-open');
+    });
+});
+
 // Navbar at scroll view and hide
 document.addEventListener("DOMContentLoaded", function () {
     gsap.registerPlugin(ScrollTrigger);
