@@ -46,11 +46,11 @@
 }
 
 .u-rich-text-doc h2 {
-    margin-bottom: var(--_fluid-responsive---paddings--padding-medium);
+    margin: var(--_fluid-responsive---paddings--padding-medium) 0;
 }
 
 .u-rich-text-doc h3 {
-    margin-bottom: var(--_fluid-responsive---paddings--padding-small);
+    margin: var(--_fluid-responsive---paddings--padding-small) 0;
 }
 
 .u-rich-text-doc p+p {
@@ -64,8 +64,8 @@
     border-radius: var(--radius--main);
 }
 
-.u-list-bp > li + li,
-.u-list-nr > li + li {
+.u-list-bp>li+li,
+.u-list-nr>li+li {
     margin-top: var(--_spacing---2);
 }
 
