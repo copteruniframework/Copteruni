@@ -45,6 +45,6 @@ li> :is(ul, ol) {
     margin-top: var(--_fluid-responsive---paddings--padding-xsmall);
 }
 
-li+li {
+/* li+li {
     margin-top: var(--_spacing---2);
-}
+} */

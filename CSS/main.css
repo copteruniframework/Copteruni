@@ -18,8 +18,8 @@
       cursor: pointer;
   }
 
-  details {
-      overflow: clip;
+  details > div:first-of-type {
+      overflow-y: clip; 
   }
 
   summary {
