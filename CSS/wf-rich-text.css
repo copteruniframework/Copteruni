@@ -36,12 +36,12 @@
     display: block;
 }
 
-p+ :is(ul, ol),
-:is(ul, ol) +p {
+.u-rich-text-blog p+ :is(ul, ol),
+.u-rich-text-blog :is(ul, ol) +p {
     margin-top: var(--_fluid-responsive---paddings--padding-small);
 }
 
-li> :is(ul, ol) {
+.u-rich-text-blog li> :is(ul, ol) {
     margin-top: var(--_fluid-responsive---paddings--padding-xsmall);
 }
 

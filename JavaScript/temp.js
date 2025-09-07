@@ -1,65 +1,40 @@
-// Navbar open mobile menu
 document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.getElementById('global_nav_menu_button');
-    const menu = document.querySelector('.global_nav_menu');
+    const navBtn = document.querySelector('[data-nav-btn="menu"]');
+    const navMenu = document.querySelector('[data-nav-item="menu"]');
+    if (!navBtn || !navMenu) return;
 
-    if (!toggleButton || !menu) return;
+    // <use>-Element im Button finden (robust, falls weitere Wrapper existieren)
+    const useEl = navBtn.querySelector('svg use');
+    const XLINK_NS = 'http://www.w3.org/1999/xlink';
 
-    const mobileBreakpoint = 991;
+    // Ziel-Icons
+    const ICON_CLOSED = '#icon-menu';
+    const ICON_OPEN = '#icon-x-lg';
 
-    const isMobileView = () => window.innerWidth <= mobileBreakpoint;
+    // Helper: Icon-HREF setzen (SVG2 + Legacy-Safari)
+    const setUseHref = (value) => {
+        if (!useEl) return;
+        useEl.setAttribute('href', value);                    // modern
+        useEl.setAttributeNS(XLINK_NS, 'xlink:href', value);  // legacy
+    };
 
-    toggleButton.addEventListener('click', () => {
-        if (!isMobileView()) return;
-        menu.classList.toggle('is-open');
-    });
+    // Helper: Icon & ARIA anhand des aktuellen Zustands aktualisieren
+    const syncIconToState = () => {
+        const isOpen = navMenu.classList.contains('is-open');
+        setUseHref(isOpen ? ICON_OPEN : ICON_CLOSED);
+        navBtn.setAttribute('aria-expanded', String(isOpen));
+    };
 
-    window.addEventListener('resize', () => {
-        if (!isMobileView()) {
-            menu.classList.remove('is-open');
-        }
-    });
-});
-
-// Mobile menu open
-document.addEventListener('DOMContentLoaded', () => {
-  const navBtn  = document.querySelector('[data-nav-btn="menu"]');
-  const navMenu = document.querySelector('[data-nav-item="menu"]');
-  if (!navBtn || !navMenu) return;
-
-  // <use>-Element im Button finden (robust, falls weitere Wrapper existieren)
-  const useEl = navBtn.querySelector('svg use');
-  const XLINK_NS = 'http://www.w3.org/1999/xlink';
-
-  // Ziel-Icons
-  const ICON_CLOSED = '#icon-menu';
-  const ICON_OPEN   = '#icon-x-lg';
-
-  // Helper: Icon-HREF setzen (SVG2 + Legacy-Safari)
-  const setUseHref = (value) => {
-    if (!useEl) return;
-    useEl.setAttribute('href', value);                    // modern
-    useEl.setAttributeNS(XLINK_NS, 'xlink:href', value);  // legacy
-  };
-
-  // Helper: Icon & ARIA anhand des aktuellen Zustands aktualisieren
-  const syncIconToState = () => {
-    const isOpen = navMenu.classList.contains('is-open');
-    setUseHref(isOpen ? ICON_OPEN : ICON_CLOSED);
-    navBtn.setAttribute('aria-expanded', String(isOpen));
-  };
-
-  // Initialen Zustand abbilden
-  syncIconToState();
-
-  // Klick-Handler: Menü togglen + Icon updaten
-  navBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('is-open');
+    // Initialen Zustand abbilden
     syncIconToState();
-  });
+
+    // Klick-Handler: Menü togglen + Icon updaten
+    navBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('is-open');
+        syncIconToState();
+    });
 });
 
-// Navbar at scroll view and hide
 document.addEventListener("DOMContentLoaded", function () {
     gsap.registerPlugin(ScrollTrigger);
 

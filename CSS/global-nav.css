@@ -124,3 +124,37 @@
         display: list-item;
     }
 }
+
+
+/* ----- */
+.global_nav_menu.is-open+.global_nav_link.is-menu {
+    color: var(--_theme---global-nav--item-color-hover);
+}
+
+#navLogoBig {
+    display: block;
+}
+
+#navLogoSmall {
+    display: none;
+}
+
+@media screen and (max-width: 440px) {
+    #navLogoBig {
+        display: none;
+    }
+
+    #navLogoSmall {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .dev_nav_btn.faq {
+        display: none;
+    }
+
+    .dev_nav_menu_list_item.faq {
+        display: list-item;
+    }
+}
