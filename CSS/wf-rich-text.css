@@ -61,6 +61,19 @@
     color: var(--_theme---color--header);
 }
 
+.u-rich-text-doc code.u-code-id {
+    color: #ff634d; /* Orange/Rot */
+}
+
+.u-rich-text-doc code.u-code-tag {
+    color: #c792ea;
+}
+
+.u-rich-text-doc code.u-code-class {
+    color: #4da6ff; /* Blau */
+}
+
+
 .u-rich-text-doc code.u-code-attr {
     color: #79e09c;
 }
