@@ -58,8 +58,13 @@
 }
 
 .u-rich-text-doc code {
-    /* color: var(--_theme---color--header); */
+    color: var(--_theme---color--header);
 }
+
+.u-rich-text-doc code.u-code-attr {
+    color: #79e09c;
+}
+
 .u-rich-text-doc .w-code-block {
     /* scrollbar-width: none; */
     margin: var(--_fluid-responsive---paddings--padding-small) 0;
