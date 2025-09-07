@@ -1,3 +1,4 @@
+// Navbar open mobile menu
 document.addEventListener('DOMContentLoaded', () => {
     const toggleButton = document.getElementById('global_nav_menu_button');
     const menu = document.querySelector('.global_nav_menu');
@@ -20,8 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-
+// Navbar at scroll view and hide
 document.addEventListener("DOMContentLoaded", function () {
     gsap.registerPlugin(ScrollTrigger);
 
