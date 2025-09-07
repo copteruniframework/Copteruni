@@ -45,6 +45,18 @@
     margin-top: var(--_fluid-responsive---paddings--padding-xsmall);
 }
 
+.u-rich-text-doc h2 {
+    margin-bottom: var(--_fluid-responsive---paddings--padding-medium);
+}
+
+.u-rich-text-doc h3 {
+    margin-bottom: var(--_fluid-responsive---paddings--padding-small);
+}
+
+.u-rich-text-doc p+p {
+    margin-top: var(--_fluid-responsive---paddings--padding-small);
+}
+
 /* li+li {
     margin-top: var(--_spacing---2);
 } */
