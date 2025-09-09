@@ -4,9 +4,16 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
             // Dein Code hier
-            const val = btn.getAttribute('data-cu-dialog-target-id');
+            
+            const dialogID = btn.dataset.cuDialogTargetId; //oder: const dialogID = btn.getAttribute('data-cu-dialog-target-id');
+            //console.log(dialogID, btn);
 
-            console.log(val, btn);
+            const dialog = document.querySelector(`dialog[data-cu-dialog-id="${dialogID}"]`);
+            //console.log(dialogID, dialog);
+
+            if (dialog) {
+                dialog.showModal();
+            }
         });
     });
 });
