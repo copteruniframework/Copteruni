@@ -73,9 +73,12 @@
     color: #4da6ff; /* Blau */
 }
 
-
 .u-rich-text-doc code.u-code-attr {
     color: #79e09c;
+}
+
+.u-rich-text-doc code.u-code-value {
+    color: #f5f5f7;
 }
 
 .u-rich-text-doc .w-code-block {
