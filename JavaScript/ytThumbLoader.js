@@ -12,13 +12,12 @@ document.querySelectorAll('img[data-yt-id]').forEach(img => {
     img.decoding ||= 'async'
     img.loading ||= 'lazy'
 
-    function pickVariant(width) {
-        if (width <= 320) return 'mqdefault'
-        if (width < 1420) return 'sddefault'
-        return 'maxresdefault'
+    let variant
+    switch (true) {
+        case width <= 320: variant = 'mqdefault'; break
+        case width < 1420: variant = 'sddefault'; break
+        default: variant = 'maxresdefault'
     }
-
-    const variant = pickVariant(width)
     img.src = ytThumbUrl(id, variant)
 })
 
