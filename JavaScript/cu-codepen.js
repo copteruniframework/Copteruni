@@ -1,5 +1,6 @@
 // Button über Attribut finden
 const button = document.querySelector('[data-cu-btn="ex1"]');
+const output = document.getElementById("imageSrcOutput");
 
 // Klick-Ereignis
 button.addEventListener("click", function () {
@@ -8,6 +9,8 @@ button.addEventListener("click", function () {
 
     // Bild mit gleichem Wert suchen
     const image = document.querySelector(`[data-cu-id="${btnValue}"]`);
+
+    output.value = image.src;
 
     // In der Konsole ausgeben
     console.log("Button-Attribut:", btnValue);
