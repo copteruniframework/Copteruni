@@ -12,5 +12,6 @@ button.addEventListener("click", function () {
     // In der Konsole ausgeben
     console.log("Button-Attribut:", btnValue);
     console.log("Gefundenes Bild:", image);
-    console.log("Alt-Text:", image.alt);
+    console.log(image.width); // angezeigte Breite in Pixel
+    console.log(image.naturalWidth);  // originale Breite der Bilddatei
 });
