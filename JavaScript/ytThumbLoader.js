@@ -12,13 +12,14 @@ document.querySelectorAll('img[data-yt-id]').forEach(img => {
     img.decoding ||= 'async'
     img.loading ||= 'lazy'
 
-    if (width <= 320) {
-        img.src = ytThumbUrl(id, 'mqdefault')
-    } else if (width < 1420) {
-        img.src = ytThumbUrl(id, 'sddefault')
-    } else {
-        img.src = ytThumbUrl(id, 'maxresdefault')
+    function pickVariant(width) {
+        if (width <= 320) return 'mqdefault'
+        if (width < 1420) return 'sddefault'
+        return 'maxresdefault'
     }
+
+    const variant = pickVariant(width)
+    img.src = ytThumbUrl(id, variant)
 })
 
 document.addEventListener('DOMContentLoaded', () => {
