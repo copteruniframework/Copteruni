@@ -2,6 +2,7 @@
 const button = document.querySelector('[data-cu-btn="ex1"]');
 const output = document.getElementById("imageSrcOutput");
 const cpyButton = document.querySelector('[data-cu-btn="cpy"]');
+const outNaturalWidth = document.getElementById("naturalWidth");
 
 // Klick-Ereignis für den ersten Button
 button.addEventListener("click", function () {
@@ -13,6 +14,8 @@ button.addEventListener("click", function () {
 
     // URL ins Input schreiben
     output.value = image.src;
+
+    outNaturalWidth.textContent = `Originalbreite des Bildes: ${image.naturalWidth}px`;
 
     // In der Konsole Infos ausgeben
     console.log("Button-Attribut:", btnValue);
