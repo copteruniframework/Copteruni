@@ -1,24 +1,21 @@
-const YT_VARIANTS = [
-    { name: 'default', width: 120 },
-    { name: 'mqdefault', width: 320 },
-    { name: 'hqdefault', width: 480 },
-    { name: 'sddefault', width: 640 },
-    { name: 'maxresdefault', width: 1280 },
-];
+const YT_IMG_HOST = 'https://i.ytimg.com/vi/'
+
+function ytThumbUrl(id, variant = 'sddefault') {
+    if (!id) return ''
+    return `${YT_IMG_HOST}${encodeURIComponent(id)}/${variant}.jpg` // Init: ytThumbUrl(id, 'sddefault')
+}
 
 document.querySelectorAll('img[data-yt-id]').forEach(img => {
     const id = img.dataset.ytId
-    const width = Math.round(img.getBoundingClientRect().width || img.clientWidth || 0)
+    const width = Math.round(img.getBoundingClientRect().width || 0)
 
     img.decoding ||= 'async'
     img.loading ||= 'lazy'
 
     if (width < 1420) {
-        img.src = `https://i.ytimg.com/vi/${id}/sddefault.jpg`
-        console.log(`id=${id}`)
+        img.src = ytThumbUrl(id, 'sddefault')
     } else {
-        // Optional: was laden wir sonst? Z.B. maxresdefault
-        img.src = `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`
+        img.src = ytThumbUrl(id, 'maxresdefault')
     }
 })
 
