@@ -12,7 +12,9 @@ document.querySelectorAll('img[data-yt-id]').forEach(img => {
     img.decoding ||= 'async'
     img.loading ||= 'lazy'
 
-    if (width < 1420) {
+    if (width <= 320) {
+        img.src = ytThumbUrl(id, 'mqdefault')
+    } else if (width < 1420) {
         img.src = ytThumbUrl(id, 'sddefault')
     } else {
         img.src = ytThumbUrl(id, 'maxresdefault')
