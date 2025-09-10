@@ -19,6 +19,8 @@ document.querySelectorAll('img[data-yt-id]').forEach(img => {
         default: variant = 'maxresdefault'
     }
     img.src = ytThumbUrl(id, variant)
+
+    console.log(`[ytThumb] id=${id} width=${width}px`)
 })
 
 document.addEventListener('DOMContentLoaded', () => {
