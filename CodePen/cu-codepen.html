@@ -9,24 +9,30 @@
 </head>
 
 <body>
-    <div class="u-max-width-40rem u-mx-auto u-display-flex u-flex-flow-column u-gap-1rem">
-        <h1>YouTube Thumbnail Link Generator</h1>
-        <form>
-            <label class="u-font-weight-700">Video ID</label>
-            <input type="text" id="ytVideoId" placeholder="POg49GumiVQ" class="u-display-block u-width-100">
-        </form>
-        <div class="u-position-relative">
-            <img id="thumbnail" class="u-border-radius-main " src="https://i.ytimg.com/vi/POg49GumiVQ/maxresdefault.jpg"
-                alt="YouTube Thumbnail" data-cu-id="ex1">
+    <div class="u-max-width-40rem u-mx-auto ">
+        <h1>
+            YouTube Thumbnail Link Generator
+        </h1>
+        <form class="u-display-flex u-flex-flow-column u-gap-1rem">
+            <label class="u-font-weight-700">
+                Video ID
+                <input name="ytVideoId" type="text" id="ytVideoId" placeholder="POg49GumiVQ" class="">
+            </label>
+
+            <div class="u-position-relative">
+                <img id="thumbnail" class="u-border-radius-main "
+                    src="https://i.ytimg.com/vi/POg49GumiVQ/maxresdefault.jpg" alt="YouTube Thumbnail" data-cu-id="ex1">
                 <p class="image_text_label ">Text</p>
-        </div>
-        <div class="u-display-flex">
-            <input type="text" id="imageSrcOutput" placeholder="Bild-URL erscheint hier..."
-                class="u-display-block u-width-100" readonly>
-            <button data-cu-btn="cpy">
-                Coppy
-            </button>
-        </div>
+            </div>
+            <div class="u-display-flex">
+                <input class="u-display-block u-width-100" type="text" id="imageSrcOutput"
+                    placeholder="Bild-URL erscheint hier..." readonly>
+                <button type="button" data-cu-btn="cpy">
+                    Coppy
+                </button>
+            </div>
+        </form>
+
         <p id="Width"></p>
         <p id="naturalWidth"></p>
     </div>
