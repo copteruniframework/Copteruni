@@ -1,5 +1,4 @@
 // Button über Attribut finden
-const button = document.querySelector('[data-cu-btn="ex1"]');
 const output = document.getElementById("imageSrcOutput");
 const cpyButton = document.querySelector('[data-cu-btn="cpy"]');
 const pNaturalWidth = document.getElementById("naturalWidth");
