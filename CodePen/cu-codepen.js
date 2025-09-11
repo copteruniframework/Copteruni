@@ -21,7 +21,8 @@ function ytThumbUrl(id, variant = 'sddefault', format = "jpg") {
 }
 
 function updateThum(id) {
-    if (!id?.trim()) {
+    const clrInput = (id || "").trim();
+    if (!clrInput) {
         img_ytThumbnail.src = ytThumbUrl(input_ytVideoId.placeholder, 'maxresdefault')
     } else {
         img_ytThumbnail.src = ytThumbUrl(id.trim(), 'maxresdefault')
