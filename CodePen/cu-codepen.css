@@ -9,6 +9,7 @@
 
 :root[data-theme="light"] {
     --background-primary: gray;
+    --text-color-primary: #343434;
 }
 
 *,

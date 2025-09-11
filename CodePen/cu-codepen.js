@@ -49,3 +49,14 @@ cpyButton.addEventListener("click", function () {
 });
 
 //https://i.ytimg.com/vi_webp/POg49GumiVQ/maxresdefault.webp
+
+const root = document.documentElement;        // <html>
+const toggle = document.getElementById('themeToggle');
+
+toggle.addEventListener('change', (e) => {
+    if (e.target.checked) {
+        root.setAttribute('data-theme', 'light'); // Light aktiv
+    } else {
+        root.removeAttribute('data-theme');       // zurück zu Dark (Default)
+    }
+});
