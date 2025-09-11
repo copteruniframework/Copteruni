@@ -50,6 +50,14 @@ button {
     flex-flow: column;
 }
 
+.u-flex-grow {
+    flex-grow: 1;
+}
+
+.u-flex-no-shrink {
+    flex-shrink: 0;
+}
+
 .u-gap-1rem {
     gap: 1rem;
 }
@@ -122,4 +130,14 @@ button {
     bottom: 0.5rem;
     color: white;
     font-size: 0.8rem;
+}
+
+.h_label_input_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.h_label_input_wrapper > span {
+    flex-shrink: 0;
 }
