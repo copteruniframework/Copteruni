@@ -20,7 +20,11 @@ button {
     font-size: inherit;
 }
 
-.button {}
+input {
+    border: 2px solid #ccc; 
+    border-color: black;
+    border-radius: 0.3rem;
+}
 
 .u-display-block {
     display: block;
@@ -70,4 +74,8 @@ button {
 
 .u-border-radius-main {
     border-radius: 1rem;
+}
+
+.u-border-radius-0_5rem {
+    border-radius: 0.5rem;
 }
