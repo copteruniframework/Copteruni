@@ -1,0 +1,42 @@
+{
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "EU-Drohnenführerschein A2 Onlinekurs",
+    "description": "Mache den EU-Drohnenführerschein A2 Onlinekurs komplett Online",
+    "provider": {
+        "@type": "Organization",
+        "name": "Copteruni GmbH",
+        "url": "https://copteruni.com"
+    },
+    "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "online",
+        "inLanguage": "de",
+        "location": {
+            "@type": "VirtualLocation",
+            "url": "https://copteruni.com/drohnenfuehrerscheina2/"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "199.00",
+            "priceCurrency": "EUR",
+            "url": "https://copteruni.com/drohnenfuehrerscheina2/",
+            "availability": "https://schema.org/InStock"
+        }
+    },
+    "educationalCredentialAwarded": "EU-Kompetenznachweis Fernpilotenzeugnis A2",
+    "learningResourceType": "Online-Kurs",
+    "educationalLevel": "Beginner",
+    "teaches": [
+        "Luftrecht",
+        "Meteorologie",
+        "Grundlagen des Fliegens",
+        "Allgemeines UAV-Wissen",
+        "Flugbetrieb"
+    ],
+    "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student",
+        "audienceType": "Mindestalter 16 Jahre, Internetzugang erforderlich"
+    }
+}
