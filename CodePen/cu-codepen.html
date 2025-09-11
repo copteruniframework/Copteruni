@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="cu-codepen.css">
 </head>
+
 <body>
-    
+    <div class="u-max-width-30rem u-mx-auto u-display-flex u-flex-flow-column u-gap-1rem">
+        <form>
+            <label>YouTube Video ID</label>
+            <input type="text" id="ytVideoId" placeholder="POg49GumiVQ" class="u-display-block u-width-100">
+        </form>
+        <img id="thumbnail" class="u-border-radius-main " src="https://i.ytimg.com/vi/POg49GumiVQ/maxresdefault.jpg"
+            alt="YouTube Thumbnail" data-cu-id="ex1">
+        <div class="u-display-flex">
+            <button data-cu-btn="ex1">
+                Button
+            </button>
+            <input type="text" id="imageSrcOutput" placeholder="Bild-URL erscheint hier..."
+                class="u-display-block u-width-100" readonly>
+            <button data-cu-btn="cpy">
+                Coppy
+            </button>
+        </div>
+        <p id="naturalWidth"></p>
+    </div>
+    <script src="cu-codepen.js"></script>
 </body>
+
 </html>
