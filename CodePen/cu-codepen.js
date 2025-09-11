@@ -43,8 +43,8 @@ input_ytVideoId.addEventListener("input", function (event) {
 const cpyButton = document.querySelector('[data-cu-btn="cpy"]');
 // Klick-Ereignis für den Copy-Button
 cpyButton.addEventListener("click", function () {
-    if (output.value) {
-        navigator.clipboard.writeText(output.value)
+    if (output_ytThumbUrl.value) {
+        navigator.clipboard.writeText(output_ytThumbUrl.value)
     }
 });
 
