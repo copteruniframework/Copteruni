@@ -13,7 +13,7 @@
         <h1>
             YouTube Thumbnail Link Generator
         </h1>
-        <form class="u-display-flex u-flex-flow-column u-gap-1rem">
+        <form id="ytThumbLinkGen" class="u-display-flex u-flex-flow-column u-gap-1rem">
             <label class="u-font-weight-700">
                 Video ID
                 <input name="ytVideoId" type="text" id="ytVideoId" placeholder="POg49GumiVQ" class="">
@@ -25,8 +25,7 @@
                 <p class="image_text_label ">Text</p>
             </div>
             <div class="u-display-flex">
-                <input class="u-display-block u-width-100" type="text" id="imageSrcOutput"
-                    placeholder="Bild-URL erscheint hier..." readonly>
+                <input name="ytThumbUrl" class="u-display-block u-width-100" type="text"                placeholder="Bild-URL erscheint hier..." readonly>
                 <button type="button" data-cu-btn="cpy">
                     Coppy
                 </button>
