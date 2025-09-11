@@ -1,0 +1,36 @@
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Copteruni GmbH",
+    "url": "https://copteruni.com",
+    "logo": "https://e8t5m4b8.delivery.rocketcdn.me/wp-content/uploads/2023/03/Copteruni-Logo-Horizontal.svg",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lange Straße 27",
+        "addressLocality": "Walsrode",
+        "postalCode": "29664",
+        "addressCountry": "DE"
+    },
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+49-32-221099362",
+        "contactType": "customer support",
+        "email": "info@copteruni.com",
+        "availableLanguage": [
+            "German",
+            "English",
+            "French"
+        ],
+        "areaServed": "DE"
+    },
+    "founder": {
+        "@type": "Person",
+        "name": "Jan Friedrich Evers"
+    },
+    "sameAs": [
+        "https://facebook.com/copteruni",
+        "https://www.youtube.com/channel/UCFc-M1MVLfPC5jgbZeligJQ",
+        "https://www.linkedin.com/in/jan-evers-600742a4",
+        "https://www.instagram.com/copteruni/"
+    ]
+}
