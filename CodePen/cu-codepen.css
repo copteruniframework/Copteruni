@@ -1,0 +1,69 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial';
+    background-color: gray;
+    font-size: 1.1rem;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+input,
+button {
+    font-size: inherit;
+}
+
+.button {}
+
+.u-display-block {
+    display: block;
+}
+
+.u-display-flex {
+    display: flex;
+}
+
+.u-flex-flow-column {
+    flex-flow: column;
+}
+
+.u-gap-1rem {
+    gap: 1rem;
+}
+
+.u-container-large {
+    width: 100%;
+    margin: auto;
+    max-width: 90rem;
+}
+
+.u-mx-auto {
+    margin: auto;
+}
+
+.u-my-1rem {
+    margin: 1rem 0;
+}
+
+.u-mt-1rem {
+    margin-top: 1rem;
+}
+
+.u-width-100 {
+    width: 100%;
+}
+
+.u-max-width-30rem {
+    max-width: 30rem;
+}
+
+.u-border-radius-main {
+    border-radius: 1rem;
+}
