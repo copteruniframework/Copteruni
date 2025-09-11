@@ -7,11 +7,21 @@ const pThumbWidth = document.getElementById("Width");
 
 const inputYtVideoId = document.getElementById("ytVideoId");
 const imgThumbnail = document.getElementById("thumbnail");
+const imgThumbnailLabel = imgThumbnail.parentElement.querySelector('.image_text_label');
 
 const initVideoId = inputYtVideoId.placeholder
 
 const YT_IMG_HOST_JPG = 'https://i.ytimg.com/vi/'
-function ytThumbUrl(id, variant = 'sddefault') {
+const YT_IMG_HOST_WEBP = 'https://i.ytimg.com/vi_webp/'
+
+/**
+ * Baut die Thumbnail-URL für eine YouTube-Video-ID.
+ * @param {string} id        - YouTube Video ID (z. B. "POg49GumiVQ")
+ * @param {string} variant   - z. B. "sddefault" | "maxresdefault"
+ * @param {("jpg"|"webp")} format - Bildformat "jpg"|"webp"
+ * @returns {string} URL oder leerer String
+ */
+function ytThumbUrl(id, variant = 'sddefault', format = "jpg") {
     if (!id) return ''
     return `${YT_IMG_HOST_JPG}${encodeURIComponent(id)}/${variant}.jpg` // Init: ytThumbUrl(id, 'sddefault')
 }
@@ -24,6 +34,7 @@ function updateThum(id) {
     }
     output.value = imgThumbnail.src;
     imgThumbnail.onload = () => {
+        imgThumbnailLabel.textContent = `${imgThumbnail.naturalWidth} x ${imgThumbnail.naturalHeight}px`;
         pNaturalWidth.textContent = `Originalbreite des Bildes: ${imgThumbnail.naturalWidth}px`;
         pThumbWidth.innerHTML = `<strong>Angezeigte Breite: ${imgThumbnail.width}px</strong>`;
     };
@@ -31,9 +42,6 @@ function updateThum(id) {
 
 // Init
 updateThum()
-//imgThumbnail.src = ytThumbUrl(ytVideoId, 'maxresdefault')
-output.value = imgThumbnail.src;
-
 
 inputYtVideoId.addEventListener("input", function (event) {
     updateThum(event.target.value)
@@ -47,27 +55,3 @@ cpyButton.addEventListener("click", function () {
 });
 
 //https://i.ytimg.com/vi_webp/POg49GumiVQ/maxresdefault.webp
-
-// Klick-Ereignis für den ersten Button
-button.addEventListener("click", function () {
-    // Attributwert vom Button lesen
-    const btnValue = button.dataset.cuBtn;   // z.B. "ex1"
-
-    // Bild mit gleichem data-cu-id suchen
-    const image = document.querySelector(`[data-cu-id="${btnValue}"]`);
-
-    // URL ins Input schreiben
-    output.value = image.src;
-
-    pNaturalWidth.textContent = `Originalbreite des Bildes: ${image.naturalWidth}px`;
-
-    // In der Konsole Infos ausgeben
-    console.log("Button-Attribut:", btnValue);
-    console.log("Gefundenes Bild:", image);
-    console.log("Angezeigte Breite:", image.width);
-    console.log("Originalbreite:", image.naturalWidth);
-    console.log(ytDefaultId)
-    console.log(urlYT_IMG_HOST_JPG)
-});
-
-
