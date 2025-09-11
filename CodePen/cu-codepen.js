@@ -39,6 +39,13 @@ inputYtVideoId.addEventListener("input", function (event) {
     updateThum(event.target.value)
 });
 
+// Klick-Ereignis für den Copy-Button
+cpyButton.addEventListener("click", function () {
+    if (output.value) {
+        navigator.clipboard.writeText(output.value)
+    }
+});
+
 //https://i.ytimg.com/vi_webp/POg49GumiVQ/maxresdefault.webp
 
 // Klick-Ereignis für den ersten Button
@@ -63,9 +70,4 @@ button.addEventListener("click", function () {
     console.log(urlYT_IMG_HOST_JPG)
 });
 
-// Klick-Ereignis für den Copy-Button
-cpyButton.addEventListener("click", function () {
-    if (output.value) {
-        navigator.clipboard.writeText(output.value)
-    }
-});
+
