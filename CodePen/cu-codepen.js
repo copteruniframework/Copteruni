@@ -2,12 +2,12 @@
 const button = document.querySelector('[data-cu-btn="ex1"]');
 const output = document.getElementById("imageSrcOutput");
 const cpyButton = document.querySelector('[data-cu-btn="cpy"]');
-const outNaturalWidth = document.getElementById("naturalWidth");
+const pNaturalWidth = document.getElementById("naturalWidth");
 
 const inputYtVideoId = document.getElementById("ytVideoId");
 const imgThumbnail = document.getElementById("thumbnail");
 
-let ytVideoId = inputYtVideoId.placeholder
+const initVideoId = inputYtVideoId.placeholder
 
 const YT_IMG_HOST_JPG = 'https://i.ytimg.com/vi/'
 function ytThumbUrl(id, variant = 'sddefault') {
@@ -15,14 +15,26 @@ function ytThumbUrl(id, variant = 'sddefault') {
     return `${YT_IMG_HOST_JPG}${encodeURIComponent(id)}/${variant}.jpg` // Init: ytThumbUrl(id, 'sddefault')
 }
 
+function updateThum(id) {
+    if (!id?.trim()) {
+        imgThumbnail.src = ytThumbUrl(initVideoId, 'maxresdefault')
+    } else {
+        imgThumbnail.src = ytThumbUrl(id.trim(), 'maxresdefault')
+    }
+    output.value = imgThumbnail.src;
+    imgThumbnail.onload = () => {
+        pNaturalWidth.textContent = `Originalbreite des Bildes: ${imgThumbnail.naturalWidth}px`;
+    };
+}
+
 // Init
-imgThumbnail.src = ytThumbUrl(ytVideoId, 'maxresdefault')
+updateThum()
+//imgThumbnail.src = ytThumbUrl(ytVideoId, 'maxresdefault')
 output.value = imgThumbnail.src;
 
 
 inputYtVideoId.addEventListener("input", function (event) {
-    imgThumbnail.src = ytThumbUrl(event.target.value, 'maxresdefault')
-    output.value = imgThumbnail.src;
+    updateThum(event.target.value)
 });
 
 //https://i.ytimg.com/vi_webp/POg49GumiVQ/maxresdefault.webp
@@ -38,7 +50,7 @@ button.addEventListener("click", function () {
     // URL ins Input schreiben
     output.value = image.src;
 
-    outNaturalWidth.textContent = `Originalbreite des Bildes: ${image.naturalWidth}px`;
+    pNaturalWidth.textContent = `Originalbreite des Bildes: ${image.naturalWidth}px`;
 
     // In der Konsole Infos ausgeben
     console.log("Button-Attribut:", btnValue);
