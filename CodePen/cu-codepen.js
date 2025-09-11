@@ -25,7 +25,7 @@ function updateThum(id) {
     output.value = imgThumbnail.src;
     imgThumbnail.onload = () => {
         pNaturalWidth.textContent = `Originalbreite des Bildes: ${imgThumbnail.naturalWidth}px`;
-        pThumbWidth.textContent = `Originalbreite des Bildes: ${imgThumbnail.width}px`;
+        pThumbWidth.innerHTML = `<strong>Angezeigte Breite: ${imgThumbnail.width}px</strong>`;
     };
 }
 
