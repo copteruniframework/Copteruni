@@ -64,6 +64,10 @@ button {
     max-width: 30rem;
 }
 
+.u-max-width-40rem {
+    max-width: 40rem;
+}
+
 .u-border-radius-main {
     border-radius: 1rem;
 }
