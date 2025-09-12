@@ -172,7 +172,3 @@ button {
 .u-background-color-red {
     background-color: rgba(190, 62, 33, 0.383);
 }
-
-/* [cu-list-sort="abc"] > div:nth-child(1) {
-  background-color: red;
-} */
