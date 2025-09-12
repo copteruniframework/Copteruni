@@ -170,7 +170,7 @@ button {
     display: inline-block;
     padding: 0.63rem;
     background-color: color-mix(in srgb, currentcolor 20%, transparent);
-    border: currentcolor 2px solid;
+    border: currentcolor 1px solid;
     border-radius: 50vw;
     font-size: 15px;
     font-weight: 500;
