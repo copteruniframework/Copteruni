@@ -8,22 +8,42 @@
     --space-2: .5rem;
 }
 
-:root[data-theme="light"] {
+ /* :root[data-theme="light"] {
     --background-primary: gray;
     --text-color-primary: #343434;
-}
+}  */
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
 
 body {
     font-family: 'Arial';
     background-color: var(--background-primary);
     font-size: 1.1rem;
     color: var(--text-color-primary);
+}
+
+.u-theme-dark {
+    --background-primary: black;
+    --text-color-primary: #dedede;
+}
+
+.u-theme-light {
+    --background-primary: rgb(181, 54, 54);
+    --text-color-primary: #343434;
+}
+
+/* data-theme aktiviert die Klasse */
+/* [data-theme="dark"] {
+  composes: u-theme-dark;
+}
+
+[data-theme="light"] {
+  composes: u-theme-light;
+} */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 p {

@@ -67,12 +67,23 @@ cpyButton.addEventListener("click", function () {
 const root = document.documentElement;        // <html>
 const toggle = document.getElementById('themeToggle');
 
+// toggle.addEventListener('change', (e) => {
+//     if (e.target.checked) {
+//         root.setAttribute('data-theme', 'light'); // Light aktiv
+//     } else {
+//         root.removeAttribute('data-theme');       // zurück zu Dark (Default)
+//     }
+// });
+
+
 toggle.addEventListener('change', (e) => {
-    if (e.target.checked) {
-        root.setAttribute('data-theme', 'light'); // Light aktiv
-    } else {
-        root.removeAttribute('data-theme');       // zurück zu Dark (Default)
-    }
+  if (e.target.checked) {
+    root.classList.add('u-theme-light');
+    root.classList.remove('u-theme-dark');
+  } else {
+    root.classList.add('u-theme-dark');
+    root.classList.remove('u-theme-light');
+  }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
