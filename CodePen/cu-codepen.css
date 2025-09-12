@@ -169,7 +169,6 @@ button {
 .badge {
     display: inline-block;
     padding: 0.63rem;
-    color:#02933F;
     background-color: color-mix(in srgb, currentcolor 20%, transparent);
     border: currentcolor 2px solid;
     border-radius: 50vw;
@@ -181,6 +180,22 @@ button {
 
 .badge:hover {
     background-color: transparent;
+}
+
+.badge.is-green {
+    color:#02933F;
+}
+
+.badge.is-red {
+    color: #D2042D;
+}
+
+.badge.is-blue {
+    color: #1E90FF;
+}
+
+.badge.is-yellow {
+    color: #FFD700;
 }
 
 .u-background-color-green {
