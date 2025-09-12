@@ -27,18 +27,9 @@ body {
 }
 
 .u-theme-light {
-    --background-primary: rgb(181, 54, 54);
+    --background-primary: rgb(149, 149, 149);
     --text-color-primary: #343434;
 }
-
-/* data-theme aktiviert die Klasse */
-/* [data-theme="dark"] {
-  composes: u-theme-dark;
-}
-
-[data-theme="light"] {
-  composes: u-theme-light;
-} */
 
 *,
 *::before,
