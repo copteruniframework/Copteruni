@@ -185,8 +185,3 @@ button {
 .table > :nth-child(odd) {
     background-color: var(--background-secondary);
 }
-
-
-/* div:nth-child(odd) {
-  background-color: lightgray;
-} */
