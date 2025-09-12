@@ -156,3 +156,23 @@ button {
 .h_label_input_wrapper>span {
     flex-shrink: 0;
 }
+
+.badge {
+    display: inline-block;
+    
+    padding: 5px 10px;
+
+    text-decoration-line: none;
+}
+
+.u-background-color-green {
+    background-color: rgba(33, 190, 33, 0.383);
+}
+
+.u-background-color-red {
+    background-color: rgba(190, 62, 33, 0.383);
+}
+
+/* [cu-list-sort="abc"] > div:nth-child(1) {
+  background-color: red;
+} */
