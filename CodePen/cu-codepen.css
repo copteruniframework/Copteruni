@@ -168,10 +168,19 @@ button {
 
 .badge {
     display: inline-block;
-    
-    padding: 5px 10px;
-
+    padding: 0.63rem;
+    color:#02933F;
+    background-color: color-mix(in srgb, currentcolor 20%, transparent);
+    border: currentcolor 2px solid;
+    border-radius: 50vw;
+    font-size: 15px;
+    font-weight: 500;
     text-decoration-line: none;
+    line-height: 1;
+}
+
+.badge:hover {
+    background-color: transparent;
 }
 
 .u-background-color-green {
