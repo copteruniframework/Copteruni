@@ -1,12 +1,17 @@
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, li {
+      margin: 0;
+  }
+
   section,
   header,
   footer {
       position: relative;
-  }
-
-  iframe,
-  button {
-      padding: unset;
   }
 
   button {
@@ -18,8 +23,8 @@
       cursor: pointer;
   }
 
-  details > div:first-of-type {
-      overflow-y: clip; 
+  details>div:first-of-type {
+      overflow-y: clip;
   }
 
   summary {
