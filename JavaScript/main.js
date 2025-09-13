@@ -82,8 +82,49 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Details - Dropdown
-document.addEventListener('DOMContentLoaded', () => {
+/**
+ * Animiert das Öffnen/Schließen von `<details>`-Elementen mit **GSAP**.
+ *
+ * Verhalten:
+ * - Intercepted `summary`-Klick (per `preventDefault`) für kontrollierte Animation.
+ * - Öffnen: animiert das direkt nachfolgende Content-Element (`summary.nextElementSibling`)
+ *   von `height: 0, opacity: 0` auf seine natürliche Höhe/Deckkraft.
+ * - Schließen: animiert zurück auf `height: 0, opacity: 0` und setzt anschließend `detail.open = false`.
+ * - Während einer laufenden Tween wird eine erneute Interaktion blockiert (`gsap.isTweening`).
+ * - Optionales **Autoclose**: Mit `data-autoclose="true"` am `<details>` schließt das Element
+ *   bei Klicks außerhalb automatisch.
+ *
+ * Voraussetzungen:
+ * - GSAP v3 muss global verfügbar sein (`window.gsap`).
+ * - Das animierte Content-Element ist `summary.nextElementSibling`. Stelle sicher,
+ *   dass die gewünschte Content-Wrapper-Struktur vorliegt.
+ *
+ * Zugänglichkeit:
+ * - Der native Toggle wird via JS gesteuert; der `open`-State bleibt korrekt gesetzt/zurückgesetzt.
+ * - Die `summary`-Interaktion bleibt fokussierbar; Animation ändert nur Präsentation.
+ *
+ * @returns {void} Kein Rückgabewert.
+ *
+ * @example
+ * <!-- Markup -->
+ * <details data-autoclose="true">
+ *   <summary>Mehr anzeigen</summary>
+ *   <div>
+ *     <p>Dein Inhalt …</p>
+ *   </div>
+ * </details>
+ *
+ * @example
+ * // Initialisierung (Projektstil mit DOMContentLoaded)
+ * document.addEventListener('DOMContentLoaded', () => {
+ *   if (!window.gsap) return;
+ *   initGSAPDetails();
+ * });
+ *
+ * @since 1.0.0
+ * @see https://gsap.com/docs/v3/
+ */
+function initGSAPDetails() {
   document.querySelectorAll('details').forEach(detail => {
     const summary = detail.querySelector('summary');
     const content = summary.nextElementSibling;
@@ -136,8 +177,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
-});
-
+}
+initGSAPDetails();
 
 /**
  * Setzt das **aktuelle Jahr** in alle `<time>`-Elemente mit `datetime="currentYear"`.
@@ -174,7 +215,7 @@ function initCurrentYear() {
     el.textContent = currentYear;
   });
 }
-
+initCurrentYear();
 // GSAP
 
 // hide-show-fab
