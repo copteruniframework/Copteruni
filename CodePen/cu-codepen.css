@@ -1,14 +1,16 @@
 :root {
     --background-primary: black;
     --background-secondary: rgba(49, 49, 49, 0.891);
+    --brand: rgba(23, 190, 187, 1);
+    --brand-800: rgb(11, 89, 88);
+    --brand-section-background: var(--brand-800);
     --text-color-primary: #dedede;
-    --brand: #3b82f6;
     --radius: 12px;
     --space-1: .25rem;
     --space-2: .5rem;
 }
 
- /* :root[data-theme="light"] {
+/* :root[data-theme="light"] {
     --background-primary: gray;
     --text-color-primary: #343434;
 }  */
@@ -24,11 +26,23 @@ body {
 .u-theme-dark {
     --background-primary: black;
     --text-color-primary: #dedede;
+    --brand-section-background: var(--brand-800);
 }
 
 .u-theme-light {
     --background-primary: rgb(149, 149, 149);
     --text-color-primary: #343434;
+    --brand-section-background: var(--brand);
+}
+
+.u-brand-cu {
+    --brand: rgba(23, 190, 187, 1);
+    --brand-800: rgb(11, 89, 88);
+}
+
+.u-brand-bos {
+    --brand: #ff634d;
+    --brand-800: #6e2e25;
 }
 
 *,
@@ -194,7 +208,7 @@ button {
 }
 
 .badge.is-green {
-    color:#02933F;
+    color: #02933F;
 }
 
 .badge.is-red {
@@ -217,6 +231,6 @@ button {
     background-color: rgba(190, 62, 33, 0.383);
 }
 
-.table > :nth-child(odd) {
-    background-color: var(--background-secondary);
+.table> :nth-child(odd) {
+    background-color: var(--brand-section-background);
 }
