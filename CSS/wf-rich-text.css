@@ -88,6 +88,7 @@
     margin: var(--_fluid-responsive---paddings--padding-small) 0;
     font-size: var(--_fluid-responsive---text--text-size-small);
     border-radius: var(--radius--main);
+    line-height: 1.5;
 }
 
 .u-rich-text-doc .u-list-bp,
