@@ -45,15 +45,15 @@
     margin-top: var(--_fluid-responsive---paddings--padding-xsmall);
 }
 
-.u-rich-text-doc h2 {
+.u-rich-text-doc>h2 {
     margin: var(--_fluid-responsive---paddings--padding-medium) 0;
 }
 
-.u-rich-text-doc h3 {
+.u-rich-text-doc>h3 {
     margin: var(--_fluid-responsive---paddings--padding-small) 0;
 }
 
-.u-rich-text-doc p+p {
+.u-rich-text-doc>p+p {
     margin-top: var(--_fluid-responsive---paddings--padding-small);
 }
 
@@ -62,7 +62,8 @@
 }
 
 .u-rich-text-doc code.u-code-id {
-    color: #ff634d; /* Orange/Rot */
+    color: #ff634d;
+    /* Orange/Rot */
 }
 
 .u-rich-text-doc code.u-code-tag {
@@ -70,7 +71,8 @@
 }
 
 .u-rich-text-doc code.u-code-class {
-    color: #4da6ff; /* Blau */
+    color: #4da6ff;
+    /* Blau */
 }
 
 .u-rich-text-doc code.u-code-attr {
