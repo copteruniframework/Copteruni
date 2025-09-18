@@ -30,9 +30,13 @@
       cursor: pointer;
   }
 
-  details>div:first-of-type {
+  /* details>div:first-of-type {
       overflow-y: clip;
-  }
+  } */
+
+  /* details[open]>div:first-of-type {
+      overflow-y: visible;
+  } */
 
   summary {
       cursor: pointer;
