@@ -135,6 +135,7 @@ function initGSAPDetails() {
       gsap.to(content, {
         height: 0,
         opacity: 0,
+        overflow: 'clip',
         duration: 0.3,
         ease: 'power2.in',
         onComplete: () => {
@@ -152,7 +153,8 @@ function initGSAPDetails() {
         detail.open = true;
         gsap.fromTo(content, {
           height: 0,
-          opacity: 0
+          opacity: 0,
+          overflow: 'clip',
         }, {
           height: content.scrollHeight,
           opacity: 1,
