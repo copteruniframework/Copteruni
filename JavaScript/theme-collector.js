@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     const THEMES = ['u-theme-dark', 'u-theme-light'];
-    const html = document.documentElement;
+    const body = document.body;
 
     let savedTheme = null;
     try {
@@ -13,7 +13,7 @@
         savedTheme = prefersDark ? 'u-theme-dark' : 'u-theme-light';
     }
 
-    html.classList.remove(...THEMES);
-    html.classList.add(savedTheme);
-    html.setAttribute('color-scheme', savedTheme === 'u-theme-dark' ? 'dark' : 'light');
+    body.classList.remove(...THEMES);
+    body.classList.add(savedTheme);
+    body.setAttribute('color-scheme', savedTheme === 'u-theme-dark' ? 'dark' : 'light');
 })();

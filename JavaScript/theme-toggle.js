@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
     const THEMES = ['u-theme-dark', 'u-theme-light'];
-    const html = document.documentElement;
+    const body = document.body;
     const toggleBtn = document.getElementById('methemetoggle');
 
     if (!toggleBtn) {
@@ -11,14 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     toggleBtn.addEventListener('click', () => {
-        const isDark = html.classList.contains('u-theme-dark');
+        const isDark = body.classList.contains('u-theme-dark');
         const newTheme = isDark ? 'u-theme-light' : 'u-theme-dark';
 
-        html.classList.remove(...THEMES);
-        html.classList.add(newTheme);
+        body.classList.remove(...THEMES);
+        body.classList.add(newTheme);
 
         // globales Attribut setzen
-        html.setAttribute(
+        body.setAttribute(
             'color-scheme',
             newTheme === 'u-theme-dark' ? 'dark' : 'light'
         );
