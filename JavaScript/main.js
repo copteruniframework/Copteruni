@@ -300,25 +300,38 @@ document.querySelectorAll('[data-cu-slider="content"]').forEach(contentEl => {
 document.addEventListener('DOMContentLoaded', () => {
   const els = document.querySelectorAll('[data-cu-counter="timer"]');
 
-  els.forEach((el) => {
-    // Text holen und in Sekunden umwandeln
+  els.forEach((el, i) => {
+    // Key für localStorage (eindeutig pro Element)
+    const storageKey = `cu-timer-${i}`;
+
+    // Zeit aus Text ermitteln (falls kein gespeicherter Wert existiert)
     const text = el.textContent.trim();
     const [mm, ss] = text.split(':').map(Number);
-    let totalSeconds = mm * 60 + ss;
+    const startSeconds = mm * 60 + ss;
 
-    // jede Sekunde runterzählen
+    // Prüfen, ob schon eine Endzeit gespeichert ist
+    let endTime = localStorage.getItem(storageKey);
+
+    if (!endTime) {
+      // Endzeit neu setzen
+      endTime = Date.now() + startSeconds * 1000;
+      localStorage.setItem(storageKey, endTime);
+    } else {
+      endTime = parseInt(endTime, 10);
+    }
+
     const interval = setInterval(() => {
-      totalSeconds--;
+      const remaining = Math.floor((endTime - Date.now()) / 1000);
 
-      // Timer anhalten, wenn 0 erreicht
-      if (totalSeconds < 0) {
+      if (remaining <= 0) {
         clearInterval(interval);
+        el.textContent = "00:00";
+        localStorage.removeItem(storageKey); // optional löschen
         return;
       }
 
-      // neue Anzeige im Format mm:ss
-      const m = String(Math.floor(totalSeconds / 60)).padStart(2, '0');
-      const s = String(totalSeconds % 60).padStart(2, '0');
+      const m = String(Math.floor(remaining / 60)).padStart(2, '0');
+      const s = String(remaining % 60).padStart(2, '0');
       el.textContent = `${m}:${s}`;
     }, 1000);
   });
