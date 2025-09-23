@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // iFrame erstellen
             const iframe = document.createElement('iframe');
-            iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(videoId)}?autoplay=1&playsinline=1`;
+            iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(videoId)}?autoplay=1&playsinline=1&rel=0`;
             iframe.width = '100%';
             iframe.height = '100%';
             iframe.setAttribute('frameborder', '0');
