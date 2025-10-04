@@ -4,6 +4,7 @@
     --nav-bg: rgba(22, 22, 23, 0.8);
     --nav-panel-bg: #fff;
     --nav-border: #e6e6e6;
+    --nav-width: 90rem;
 }
 
 .g_header {
