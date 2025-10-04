@@ -1,0 +1,25 @@
+# Node & lokaler Dev-Server
+node_modules/
+npm-debug.log*
+.yarn/*
+.pnpm-store/
+
+# Lokale HTTPS-Zertifikate/Keys (mkcert)
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+
+# Falls du den Servercode NIE pushen willst:
+server.mjs
+
+# Env/Secrets
+.env
+.env.*.local
+
+# System/Editor
+.DS_Store
+.vscode/
+.idea/
