@@ -1,6 +1,6 @@
 // JavaScript für das Copteruni-Hauptmenü (g_nav)
 // --------------------------------------------------
-// Benötigt: GSAP (gsap.min.js + gsap.matchMedia.js)
+// Benötigt: GSAP (gsap.min.js + gsap.matchMedia.js)fsdfsd
 // --------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('.g_nav');
