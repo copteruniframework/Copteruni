@@ -1,3 +1,7 @@
+// JavaScript für das Copteruni-Hauptmenü (g_nav)
+// --------------------------------------------------
+// Benötigt: GSAP (gsap.min.js + gsap.matchMedia.js)
+// --------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('.g_nav');
     const btn = document.getElementById('g_nav_btn_mobile_menu');
